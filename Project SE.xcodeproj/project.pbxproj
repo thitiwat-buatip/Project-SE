@@ -12,6 +12,12 @@
 		40A821011E80802300A3E4D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40A820FF1E80802300A3E4D5 /* Main.storyboard */; };
 		40A821031E80802300A3E4D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40A821021E80802300A3E4D5 /* Assets.xcassets */; };
 		40A821061E80802300A3E4D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40A821041E80802300A3E4D5 /* LaunchScreen.storyboard */; };
+		40A821101E80805000A3E4D5 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A8210F1E80805000A3E4D5 /* SWRevealViewController.m */; };
+		40A821121E80846D00A3E4D5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A821111E80846D00A3E4D5 /* MenuViewController.swift */; };
+		40A821141E80848400A3E4D5 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A821131E80848300A3E4D5 /* MenuTableViewCell.swift */; };
+		40A821181E808C7500A3E4D5 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A821171E808C7500A3E4D5 /* OverviewViewController.swift */; };
+		40A8211A1E80902500A3E4D5 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A821191E80902500A3E4D5 /* ReportViewController.swift */; };
+		40A8211C1E80903E00A3E4D5 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8211B1E80903E00A3E4D5 /* ControlViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,14 @@
 		40A821021E80802300A3E4D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40A821051E80802300A3E4D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40A821071E80802300A3E4D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40A8210D1E80804F00A3E4D5 /* Project SE-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Project SE-Bridging-Header.h"; sourceTree = "<group>"; };
+		40A8210E1E80805000A3E4D5 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		40A8210F1E80805000A3E4D5 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		40A821111E80846D00A3E4D5 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		40A821131E80848300A3E4D5 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		40A821171E808C7500A3E4D5 /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverviewViewController.swift; path = ../OverviewViewController.swift; sourceTree = "<group>"; };
+		40A821191E80902500A3E4D5 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		40A8211B1E80903E00A3E4D5 /* ControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +68,20 @@
 		40A820FA1E80802300A3E4D5 /* Project SE */ = {
 			isa = PBXGroup;
 			children = (
+				40A8210E1E80805000A3E4D5 /* SWRevealViewController.h */,
+				40A8210F1E80805000A3E4D5 /* SWRevealViewController.m */,
 				40A820FB1E80802300A3E4D5 /* AppDelegate.swift */,
 				40A820FD1E80802300A3E4D5 /* ViewController.swift */,
+				40A821171E808C7500A3E4D5 /* OverviewViewController.swift */,
+				40A821191E80902500A3E4D5 /* ReportViewController.swift */,
+				40A8211B1E80903E00A3E4D5 /* ControlViewController.swift */,
 				40A820FF1E80802300A3E4D5 /* Main.storyboard */,
+				40A821111E80846D00A3E4D5 /* MenuViewController.swift */,
+				40A821131E80848300A3E4D5 /* MenuTableViewCell.swift */,
 				40A821021E80802300A3E4D5 /* Assets.xcassets */,
 				40A821041E80802300A3E4D5 /* LaunchScreen.storyboard */,
 				40A821071E80802300A3E4D5 /* Info.plist */,
+				40A8210D1E80804F00A3E4D5 /* Project SE-Bridging-Header.h */,
 			);
 			path = "Project SE";
 			sourceTree = "<group>";
@@ -97,6 +119,7 @@
 					40A820F71E80802200A3E4D5 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = LNN3K54DN9;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,6 +162,12 @@
 			files = (
 				40A820FE1E80802300A3E4D5 /* ViewController.swift in Sources */,
 				40A820FC1E80802300A3E4D5 /* AppDelegate.swift in Sources */,
+				40A821101E80805000A3E4D5 /* SWRevealViewController.m in Sources */,
+				40A821121E80846D00A3E4D5 /* MenuViewController.swift in Sources */,
+				40A821141E80848400A3E4D5 /* MenuTableViewCell.swift in Sources */,
+				40A821181E808C7500A3E4D5 /* OverviewViewController.swift in Sources */,
+				40A8211C1E80903E00A3E4D5 /* ControlViewController.swift in Sources */,
+				40A8211A1E80902500A3E4D5 /* ReportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,11 +290,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LNN3K54DN9;
 				INFOPLIST_FILE = "Project SE/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "th.co.thitiwat.Project-SE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Project SE/Project SE-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,11 +306,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LNN3K54DN9;
 				INFOPLIST_FILE = "Project SE/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "th.co.thitiwat.Project-SE";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Project SE/Project SE-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
