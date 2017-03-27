@@ -79,7 +79,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if cell.menuLabel.text! == "Control"
         {
             let mainStory: UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
-            let desController = mainStory.instantiateViewController(withIdentifier: "ControlViewController") as! ControlViewController
+            let desController = mainStory.instantiateViewController(withIdentifier: "DeviceViewController") as! DeviceViewController
             let newFrontViewController = UINavigationController.init(rootViewController:desController)
             
             revealViewController.pushFrontViewController(newFrontViewController, animated: true)

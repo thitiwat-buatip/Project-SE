@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		18E458C2181C96E871D3C751 /* Pods_Project_SE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F989FED5B521DDF042EF0596 /* Pods_Project_SE.framework */; };
+		400984B71E896EF90012B2B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 400984B61E896EF90012B2B5 /* GoogleService-Info.plist */; };
+		400984B91E89895E0012B2B5 /* Device2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400984B81E89895E0012B2B5 /* Device2ViewController.swift */; };
 		40A820FC1E80802300A3E4D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A820FB1E80802300A3E4D5 /* AppDelegate.swift */; };
 		40A820FE1E80802300A3E4D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A820FD1E80802300A3E4D5 /* ViewController.swift */; };
 		40A821011E80802300A3E4D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40A820FF1E80802300A3E4D5 /* Main.storyboard */; };
@@ -19,11 +21,14 @@
 		40A821181E808C7500A3E4D5 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A821171E808C7500A3E4D5 /* OverviewViewController.swift */; };
 		40A8211A1E80902500A3E4D5 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A821191E80902500A3E4D5 /* ReportViewController.swift */; };
 		40A8211C1E80903E00A3E4D5 /* ControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A8211B1E80903E00A3E4D5 /* ControlViewController.swift */; };
+		40A9E6251E896285006106F2 /* DeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A9E6241E896285006106F2 /* DeviceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		057BD2C86F29AE492FDEEA9D /* Pods-Project SE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project SE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project SE/Pods-Project SE.debug.xcconfig"; sourceTree = "<group>"; };
 		13B20A7B46220FB4625DABB1 /* Pods-Project SE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project SE.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project SE/Pods-Project SE.release.xcconfig"; sourceTree = "<group>"; };
+		400984B61E896EF90012B2B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		400984B81E89895E0012B2B5 /* Device2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device2ViewController.swift; sourceTree = "<group>"; };
 		40A820F81E80802300A3E4D5 /* Project SE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project SE.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A820FB1E80802300A3E4D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40A820FD1E80802300A3E4D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 		40A821171E808C7500A3E4D5 /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverviewViewController.swift; path = ../OverviewViewController.swift; sourceTree = "<group>"; };
 		40A821191E80902500A3E4D5 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		40A8211B1E80903E00A3E4D5 /* ControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlViewController.swift; sourceTree = "<group>"; };
+		40A9E6241E896285006106F2 /* DeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceViewController.swift; path = ../DeviceViewController.swift; sourceTree = "<group>"; };
 		F989FED5B521DDF042EF0596 /* Pods_Project_SE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_SE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +83,7 @@
 			children = (
 				40A8210E1E80805000A3E4D5 /* SWRevealViewController.h */,
 				40A8210F1E80805000A3E4D5 /* SWRevealViewController.m */,
+				40A9E6241E896285006106F2 /* DeviceViewController.swift */,
 				40A820FB1E80802300A3E4D5 /* AppDelegate.swift */,
 				40A820FD1E80802300A3E4D5 /* ViewController.swift */,
 				40A821171E808C7500A3E4D5 /* OverviewViewController.swift */,
@@ -85,9 +92,11 @@
 				40A820FF1E80802300A3E4D5 /* Main.storyboard */,
 				40A821111E80846D00A3E4D5 /* MenuViewController.swift */,
 				40A821131E80848300A3E4D5 /* MenuTableViewCell.swift */,
+				400984B81E89895E0012B2B5 /* Device2ViewController.swift */,
 				40A821021E80802300A3E4D5 /* Assets.xcassets */,
 				40A821041E80802300A3E4D5 /* LaunchScreen.storyboard */,
 				40A821071E80802300A3E4D5 /* Info.plist */,
+				400984B61E896EF90012B2B5 /* GoogleService-Info.plist */,
 				40A8210D1E80804F00A3E4D5 /* Project SE-Bridging-Header.h */,
 			);
 			path = "Project SE";
@@ -175,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40A821061E80802300A3E4D5 /* LaunchScreen.storyboard in Resources */,
+				400984B71E896EF90012B2B5 /* GoogleService-Info.plist in Resources */,
 				40A821031E80802300A3E4D5 /* Assets.xcassets in Resources */,
 				40A821011E80802300A3E4D5 /* Main.storyboard in Resources */,
 			);
@@ -236,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40A820FE1E80802300A3E4D5 /* ViewController.swift in Sources */,
+				400984B91E89895E0012B2B5 /* Device2ViewController.swift in Sources */,
 				40A820FC1E80802300A3E4D5 /* AppDelegate.swift in Sources */,
 				40A821101E80805000A3E4D5 /* SWRevealViewController.m in Sources */,
 				40A821121E80846D00A3E4D5 /* MenuViewController.swift in Sources */,
@@ -243,6 +254,7 @@
 				40A821181E808C7500A3E4D5 /* OverviewViewController.swift in Sources */,
 				40A8211C1E80903E00A3E4D5 /* ControlViewController.swift in Sources */,
 				40A8211A1E80902500A3E4D5 /* ReportViewController.swift in Sources */,
+				40A9E6251E896285006106F2 /* DeviceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
