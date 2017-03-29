@@ -18,12 +18,20 @@ class ControlViewController: UIViewController {
     @IBOutlet weak var wattTxT: UITextField!
     @IBOutlet weak var currentTXT: UITextField!
     
+    @IBOutlet weak var on: UILabel!
+    @IBOutlet weak var current: UILabel!
+
+    @IBOutlet weak var Unit: UILabel!
+    @IBOutlet weak var watt: UILabel!
+    @IBOutlet weak var Off: UILabel!
     let mqttConfig = MQTTConfig(clientId: "clientId-LCmZfgAwv3", host: "broker.mqttdashboard.com", port: 8000, keepAlive: 60)
     
     var ref = FIRDatabase.database().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        makeRadius()
 
         // Do any additional setup after loading the view.
         ref = ref.child("Data1").child("-KeluGw-UrU7447TnKxJ")
@@ -85,6 +93,21 @@ class ControlViewController: UIViewController {
             
             
         }
+    }
+    
+    func makeRadius() {
+        
+        on.layer.masksToBounds = true
+        Off.layer.masksToBounds = true
+        Unit.layer.masksToBounds = true
+        current.layer.masksToBounds = true
+        watt.layer.masksToBounds = true
+        
+        on.layer.cornerRadius = 6
+        Off.layer.cornerRadius = 6
+        Unit.layer.cornerRadius = 6
+        current.layer.cornerRadius = 6
+        watt.layer.cornerRadius = 6
     }
     /*
     // MARK: - Navigation
