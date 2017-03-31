@@ -9,14 +9,18 @@
 import UIKit
 
 class DeviceViewController: UIViewController {
+    
+    @IBOutlet weak var btnMenu: UIBarButtonItem!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        //btnMenu.target = revealViewController()
-        //btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
+        btnMenu.target = revealViewController()
+        btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
     }
@@ -25,7 +29,16 @@ class DeviceViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func device1(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        
+    }
     
+    @IBAction func device2(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        
+        
+    }
 
     /*
     // MARK: - Navigation

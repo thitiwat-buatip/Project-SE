@@ -11,12 +11,51 @@ import Firebase
 
 class Device2ViewController: UIViewController {
     
+    @IBOutlet weak var on: UILabel!
     @IBOutlet weak var btnswitch: UISwitch!
-
+    @IBOutlet weak var off: UILabel!
+    @IBOutlet weak var unit: UILabel!
+    @IBOutlet weak var watt: UILabel!
+    @IBOutlet weak var current: UILabel!
+    
+    @IBOutlet weak var unitText: UITextField!
+    @IBOutlet weak var wattText: UITextField!
+    @IBOutlet weak var currentText: UITextField!
+    
+    var ref = FIRDatabase.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        makeRadius()
 
       // Do any additional setup after loading the view.
+        
+        ref = ref.child("Data1").child("-KeluGw-UrU7447TnKxJ")
+        
+        
+        ref.observe(.value, with: { snapshot in
+            
+            //if !snapshot.exists() { return }
+            
+            let unit = snapshot.childSnapshot(forPath: "unit").value as! Float
+            let current = snapshot.childSnapshot(forPath: "current").value as! Float
+            let watt = snapshot.childSnapshot(forPath: "watt").value as! Float
+            
+            print(snapshot)
+            
+            let unitString = "\(unit)"
+            let currentString = "\(current)"
+            let wattString = "\(watt)"
+            
+            print("2:\(unitString)")
+            
+            self.unitText.text = unitString
+            self.currentText.text = currentString
+            self.wattText.text = wattString
+            
+            
+            
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +86,26 @@ class Device2ViewController: UIViewController {
             
         }
 
+    }
+
+    @IBAction func back(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func makeRadius() {
+        
+        on.layer.masksToBounds = true
+        off.layer.masksToBounds = true
+        unit.layer.masksToBounds = true
+        current.layer.masksToBounds = true
+        watt.layer.masksToBounds = true
+        
+        on.layer.cornerRadius = 6
+        off.layer.cornerRadius = 6
+        unit.layer.cornerRadius = 6
+        current.layer.cornerRadius = 6
+        watt.layer.cornerRadius = 6
     }
 
     /*

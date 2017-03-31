@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Moscapsule
 import Firebase
 
 class ControlViewController: UIViewController {
@@ -24,7 +23,6 @@ class ControlViewController: UIViewController {
     @IBOutlet weak var Unit: UILabel!
     @IBOutlet weak var watt: UILabel!
     @IBOutlet weak var Off: UILabel!
-    let mqttConfig = MQTTConfig(clientId: "clientId-LCmZfgAwv3", host: "broker.mqttdashboard.com", port: 8000, keepAlive: 60)
     
     var ref = FIRDatabase.database().reference()
 
@@ -36,9 +34,6 @@ class ControlViewController: UIViewController {
         // Do any additional setup after loading the view.
         ref = ref.child("Data1").child("-KeluGw-UrU7447TnKxJ")
         
-        btnMenu.target = revealViewController()
-        btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         ref.observe(.value, with: { snapshot in
             
@@ -95,6 +90,18 @@ class ControlViewController: UIViewController {
         }
     }
     
+    @IBAction func back(_ sender: Any) {
+        
+        let revealViewController:SWRevealViewController = self.revealViewController()
+        
+        let mainStory: UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
+        let desController = mainStory.instantiateViewController(withIdentifier: "DeviceViewController") as! DeviceViewController
+        let newFrontViewController = UINavigationController.init(rootViewController:desController)
+        
+        revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     func makeRadius() {
         
         on.layer.masksToBounds = true
