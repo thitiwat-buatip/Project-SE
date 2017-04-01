@@ -51,7 +51,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gFQ-i5-hkg" id="QVR-nB-Q4b">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TKU-ct-Hez">
@@ -213,7 +213,6 @@
                                 </state>
                                 <connections>
                                     <action selector="device1:" destination="qk1-u4-LMS" eventType="touchUpInside" id="SdX-Bj-aIf"/>
-                                    <segue destination="Nn8-vV-Moi" kind="showDetail" id="PsT-r7-vxe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Device select" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxr-Qd-rKG">
@@ -232,7 +231,6 @@
                                 </state>
                                 <connections>
                                     <action selector="device2:" destination="qk1-u4-LMS" eventType="touchUpInside" id="VBd-av-3kC"/>
-                                    <segue destination="3xs-1W-L4o" kind="showDetail" id="hZ3-K4-KAL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -348,11 +346,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Deivce1" id="QpB-un-Pdo">
-                                        <barButtonItem key="leftBarButtonItem" title="back" id="BKm-VW-EoT">
-                                            <connections>
-                                                <segue destination="qk1-u4-LMS" kind="showDetail" id="uR5-QA-aVU"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="back" id="BKm-VW-EoT"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -386,10 +380,10 @@
             </objects>
             <point key="canvasLocation" x="2719" y="906"/>
         </scene>
-        <!--View Controller-->
+        <!--Device2 View Controller-->
         <scene sceneID="cJl-uN-Ptb">
             <objects>
-                <viewController id="3xs-1W-L4o" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Device2ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3xs-1W-L4o" customClass="Device2ViewController" customModule="Project_SE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QzY-Rt-IKf"/>
                         <viewControllerLayoutGuide type="bottom" id="nWT-Pa-Eu3"/>
@@ -402,7 +396,15 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Deivce2" id="eOs-FS-yEI"/>
+                                    <navigationItem title="Deivce2" id="eOs-FS-yEI">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="fNB-TY-PuF">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DPT-Wm-q2I">
+                                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="back"/>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQ5-FO-bMB">
@@ -418,6 +420,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="clickSwitch:" destination="Nn8-vV-Moi" eventType="valueChanged" id="VdL-pK-370"/>
+                                    <action selector="clickSwitch:" destination="3xs-1W-L4o" eventType="valueChanged" id="XdV-UT-iMM"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhv-Q2-VhD">
@@ -490,6 +493,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="current" destination="xnk-sv-Kij" id="8gK-hc-Do5"/>
+                        <outlet property="currentText" destination="Ze7-Vk-XuA" id="WDB-1p-Afa"/>
+                        <outlet property="off" destination="YQ5-FO-bMB" id="uJb-MM-fyB"/>
+                        <outlet property="on" destination="Zhv-Q2-VhD" id="jdH-5d-nNn"/>
+                        <outlet property="unit" destination="4ha-lA-bEQ" id="KYa-uC-SX1"/>
+                        <outlet property="unitText" destination="QJa-c2-djZ" id="rHs-oB-TuQ"/>
+                        <outlet property="watt" destination="Hgx-Ee-r7i" id="7dH-Lr-3BF"/>
+                        <outlet property="wattText" destination="dA0-J8-P7l" id="hMq-RL-XB6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdW-uf-qca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

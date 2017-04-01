@@ -31,11 +31,19 @@ class DeviceViewController: UIViewController {
     }
     @IBAction func device1(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        let mainStory: UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
+        let desController = mainStory.instantiateViewController(withIdentifier: "ControlViewController") as! ControlViewController
+        self.present(desController, animated: true, completion: nil)
+
         
     }
     
     @IBAction func device2(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        let mainStory: UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
+        let desController = mainStory.instantiateViewController(withIdentifier: "Device2ViewController") as! Device2ViewController
+        self.present(desController, animated: true, completion: nil)
+
         
         
     }

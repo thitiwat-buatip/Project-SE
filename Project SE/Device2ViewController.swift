@@ -26,6 +26,8 @@ class Device2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         makeRadius()
 
       // Do any additional setup after loading the view.
@@ -34,9 +36,9 @@ class Device2ViewController: UIViewController {
         
         
         ref.observe(.value, with: { snapshot in
-            
-            //if !snapshot.exists() { return }
-            
+//
+//            //if !snapshot.exists() { return }
+//            
             let unit = snapshot.childSnapshot(forPath: "unit").value as! Float
             let current = snapshot.childSnapshot(forPath: "current").value as! Float
             let watt = snapshot.childSnapshot(forPath: "watt").value as! Float
@@ -91,6 +93,14 @@ class Device2ViewController: UIViewController {
     @IBAction func back(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
+        
+        let revealViewController:SWRevealViewController = self.revealViewController()
+        
+        let mainStory: UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
+        let desController = mainStory.instantiateViewController(withIdentifier: "DeviceViewController") as! DeviceViewController
+        let newFrontViewController = UINavigationController.init(rootViewController:desController)
+        
+        revealViewController.pushFrontViewController(newFrontViewController, animated: true)
     }
     
     func makeRadius() {

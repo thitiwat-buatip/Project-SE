@@ -100,6 +100,7 @@ class ControlViewController: UIViewController {
         
         revealViewController.pushFrontViewController(newFrontViewController, animated: true)
         
+        
         self.dismiss(animated: true, completion: nil)
     }
     func makeRadius() {
