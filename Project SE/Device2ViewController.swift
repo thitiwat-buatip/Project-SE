@@ -27,6 +27,8 @@ class Device2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.showAnimate()
+        
         
         makeRadius()
 
@@ -72,7 +74,7 @@ class Device2ViewController: UIViewController {
         
         if sender.isOn {
             
-            let ON = ["ONOFF2": "ON2"]
+            let ON = ["ONOFF1": "ON1"]
             
             ref.updateChildValues(ON)
             
@@ -81,7 +83,7 @@ class Device2ViewController: UIViewController {
             
         else {
             
-            let OFF = ["ONOFF2": "OFF2"]
+            let OFF = ["ONOFF1": "OFF2"]
             
             ref.updateChildValues(OFF)
             
@@ -91,17 +93,9 @@ class Device2ViewController: UIViewController {
     }
 
     @IBAction func back(_ sender: Any) {
-        
-        dismiss(animated: true, completion: nil)
-        
-        let revealViewController:SWRevealViewController = self.revealViewController()
-        
-        let mainStory: UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
-        let desController = mainStory.instantiateViewController(withIdentifier: "DeviceViewController") as! DeviceViewController
-        let newFrontViewController = UINavigationController.init(rootViewController:desController)
-        
-        revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+        self.removeAnimate()
     }
+    
     
     func makeRadius() {
         
@@ -116,6 +110,29 @@ class Device2ViewController: UIViewController {
         unit.layer.cornerRadius = 6
         current.layer.cornerRadius = 6
         watt.layer.cornerRadius = 6
+    }
+    
+    func showAnimate()
+    {
+        self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        self.view.alpha = 0.0;
+        UIView.animate(withDuration: 0.25, animations: {
+            self.view.alpha = 1.0
+            self.view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        });
+    }
+    
+    func removeAnimate()
+    {
+        UIView.animate(withDuration: 0.25, animations: {
+            self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            self.view.alpha = 0.0;
+        }, completion:{(finished : Bool)  in
+            if (finished)
+            {
+                self.view.removeFromSuperview()
+            }
+        });
     }
 
     /*

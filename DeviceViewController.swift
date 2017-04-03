@@ -21,7 +21,7 @@ class DeviceViewController: UIViewController {
         
         btnMenu.target = revealViewController()
         btnMenu.action = #selector(SWRevealViewController.revealToggle(_:))
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        //self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
     }
 
@@ -30,19 +30,31 @@ class DeviceViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func device1(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        
+        
         let mainStory: UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
         let desController = mainStory.instantiateViewController(withIdentifier: "ControlViewController") as! ControlViewController
-        self.present(desController, animated: true, completion: nil)
+        self.addChildViewController(desController)
+        desController.view.frame = self.view.frame
+        self.view.addSubview(desController.view)
+        desController.didMove(toParentViewController: self)
+        
 
         
     }
     
     @IBAction func device2(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        
+        
+        
         let mainStory: UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
         let desController = mainStory.instantiateViewController(withIdentifier: "Device2ViewController") as! Device2ViewController
-        self.present(desController, animated: true, completion: nil)
+        
+        self.addChildViewController(desController)
+        desController.view.frame = self.view.frame
+        self.view.addSubview(desController.view)
+        desController.didMove(toParentViewController: self)
+        
 
         
         

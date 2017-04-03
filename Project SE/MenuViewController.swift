@@ -80,9 +80,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         {
             let mainStory: UIStoryboard = UIStoryboard(name:"Main", bundle: nil)
             let desController = mainStory.instantiateViewController(withIdentifier: "DeviceViewController") as! DeviceViewController
-            let newFrontViewController = UINavigationController.init(rootViewController:desController)
             
-            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+            revealViewController.pushFrontViewController(desController, animated: true)
         }
         
         
