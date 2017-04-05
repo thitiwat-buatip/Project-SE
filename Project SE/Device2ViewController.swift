@@ -74,7 +74,7 @@ class Device2ViewController: UIViewController {
         
         if sender.isOn {
             
-            let ON = ["ONOFF1": "ON1"]
+            let ON = ["ONOFF1": "ON2"]
             
             ref.updateChildValues(ON)
             

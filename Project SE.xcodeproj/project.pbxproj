@@ -60,6 +60,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		408D6CD31E93438600501023 /* control */ = {
+			isa = PBXGroup;
+			children = (
+				40A820FD1E80802300A3E4D5 /* ViewController.swift */,
+				40A821171E808C7500A3E4D5 /* OverviewViewController.swift */,
+				40A821191E80902500A3E4D5 /* ReportViewController.swift */,
+				40A9E6241E896285006106F2 /* DeviceViewController.swift */,
+				40A8211B1E80903E00A3E4D5 /* ControlViewController.swift */,
+				400984B81E89895E0012B2B5 /* Device2ViewController.swift */,
+				40A821111E80846D00A3E4D5 /* MenuViewController.swift */,
+			);
+			name = control;
+			sourceTree = "<group>";
+		};
+		408D6CD41E9343A400501023 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				40A821131E80848300A3E4D5 /* MenuTableViewCell.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		40A820EF1E80802200A3E4D5 = {
 			isa = PBXGroup;
 			children = (
@@ -83,15 +105,9 @@
 			children = (
 				40A8210E1E80805000A3E4D5 /* SWRevealViewController.h */,
 				40A8210F1E80805000A3E4D5 /* SWRevealViewController.m */,
+				408D6CD41E9343A400501023 /* model */,
+				408D6CD31E93438600501023 /* control */,
 				40A820FB1E80802300A3E4D5 /* AppDelegate.swift */,
-				40A820FD1E80802300A3E4D5 /* ViewController.swift */,
-				40A821171E808C7500A3E4D5 /* OverviewViewController.swift */,
-				40A821191E80902500A3E4D5 /* ReportViewController.swift */,
-				40A821111E80846D00A3E4D5 /* MenuViewController.swift */,
-				40A821131E80848300A3E4D5 /* MenuTableViewCell.swift */,
-				40A9E6241E896285006106F2 /* DeviceViewController.swift */,
-				40A8211B1E80903E00A3E4D5 /* ControlViewController.swift */,
-				400984B81E89895E0012B2B5 /* Device2ViewController.swift */,
 				40A821021E80802300A3E4D5 /* Assets.xcassets */,
 				40AEA1F91E8EEE2D00726BD1 /* Main.storyboard */,
 				40A821041E80802300A3E4D5 /* LaunchScreen.storyboard */,
